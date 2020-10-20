@@ -1,1 +1,10 @@
-//Your Code
+const Discord = require('discord.js');
+
+module.exports.run = (bot, message, args) => {
+  //You Code
+};
+
+module.exports.help = {
+    name: "exemple",
+    aliases: [""]
+}
