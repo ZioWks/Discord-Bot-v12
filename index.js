@@ -52,8 +52,8 @@ client.on('ready', () => {
     client.user.setPresence({
       status: "offline",
       activity: {
-          name: ";help | Smarties",
-          type: "STREAMING"
+          name: "YOUR STATUS",
+          type: "STREAMING" //Choose to STREAMING, PLAYING, WATCHING.
       }
   })
 });
@@ -63,25 +63,6 @@ client.on("message", async message => {
   if(!message.content.startsWith(config.prefix)) return;
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-})
-
-client.on('message', message => {
-    if(message.content.startsWith(';ping')) {
-        message.channel.send(`**Pong ! :ping_pong: (${client.ws.ping} ms)**`)
-    }
-
-    if(message.content.startsWith('Salut')) {
-        message.channel.send("Wsh bien ou quoi ?")
-    }
-    if(message.content.startsWith('Cc')) {
-        message.channel.send("Wsh bien ou quoi ?")
-    }
-    if(message.content.startsWith('Bonsoir')) {
-        message.channel.send("Wsh bien ou quoi ?")
-    }
-    if(message.content.startsWith('Bonjour')) {
-        message.channel.send("Wsh bien ou quoi ?")
-    }
 })
 
 client.login(config.token);
